@@ -5,11 +5,12 @@
 ;; (require 'rst-goodies)
 
 ;; (add-hook 'rst-mode-hook
-;;            (define-key rst-mode-map "C-@" 'anything-rst-toc-command))
+;;           (lambda ()
+;;            (define-key rst-mode-map (kbd "C-@") 'anything-rst-toc-command)
+;;            (define-key rst-mode-map (kbd "C-c C-t") 'anything-rst-toc-command)))
 
 ;; (defalias 'sc 'sphinx-compile)
 ;; (defalias 'so 'sphinx-browse)
-
 
 ;; install requires libraries:
 
