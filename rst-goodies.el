@@ -1,6 +1,18 @@
 ;;; rst-goodies.el
 
+;;; Setting Sample
+
+;; (require 'rst-goodies)
+
+;; (add-hook 'rst-mode-hook
+;;            (define-key rst-mode-map "C-@" 'anything-rst-toc-command))
+
+;; (defalias 'sc 'sphinx-compile)
+;; (defalias 'so 'sphinx-browse)
+
+
 ;; install requires libraries:
+
 ;; `migemo'                    http://0xcc.net/migemo/
 ;; `anything.el'               http://www.emacswiki.org/emacs/anything.el
 ;; `anything-config.el'        http://www.emacswiki.org/emacs/anything-config.el
@@ -14,7 +26,7 @@
 (defvar anything-rst-toc-buffer "*anything-rst-toc*")
 
 (defvar anything-c-source-rst-toc
-  '((name . anything-rst-toc-buffer)
+  `((name . ,anything-rst-toc-buffer)
     (init . (lambda ()
               (let ((data (rst-section-tree (rst-find-all-decorations))))
                 (with-current-buffer (anything-candidate-buffer 'global)
