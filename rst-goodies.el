@@ -9,6 +9,7 @@
 
 (require 'rst)
 (require 'anything)
+(require 'anything-migemo)
 
 (defvar anything-rst-toc-buffer "*anything-rst-toc*")
 
